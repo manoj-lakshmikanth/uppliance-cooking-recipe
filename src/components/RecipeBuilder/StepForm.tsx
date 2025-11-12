@@ -166,7 +166,7 @@ const StepForm = ({ steps, setSteps, ingredients }: StepFormProps) => {
                     fullWidth
                     label="Temperature (°C)"
                     type="number"
-                    value={step.cookingSettings?.temperature || 100}
+                    value={step.cookingSettings?.temperature}
                     onChange={(e) =>
                       updateCookingSettings(index, 'temperature', parseInt(e.target.value))
                     }
@@ -179,7 +179,7 @@ const StepForm = ({ steps, setSteps, ingredients }: StepFormProps) => {
                     fullWidth
                     label="Speed"
                     type="number"
-                    value={step.cookingSettings?.speed || 3}
+                    value={step.cookingSettings?.speed}
                     onChange={(e) => updateCookingSettings(index, 'speed', parseInt(e.target.value))}
                     inputProps={{ min: 1, max: 5 }}
                     helperText="1-5"
